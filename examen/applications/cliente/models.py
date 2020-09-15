@@ -12,3 +12,6 @@ class Cliente(models.Model):
     telefono = models.IntegerField()
     email = models.CharField(max_length=50)
 
+    def __str__(self):
+        return str(self.id) + '- ' + str(self.rut) + '- ' + self.nombre +' -'+ self.email 
+
